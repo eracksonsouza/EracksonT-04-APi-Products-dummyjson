@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./src/css/reset.css">
-  <link rel="stylesheet" href="./src/css/style.css">
-  <link rel="stylesheet" href="./src/css/responsive.css">
-
-
-  <title>Frontend Mentor | Product preview card component</title>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/responsive.css">
+    <title>Product preview card component</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="categories-container">
+                <select id="category-filter" onchange="filterByCategory(this.value)">
+                    <option value="">Todas as categorias</option>
+                </select>
+            </div>
 
+            <!-- Cart Icon -->
+            <div class="cart-container">
+                <div class="cart-icon" onclick="toggleCart()">
+                    <img src="./src/images/icon-cart.svg" alt="icone carrinho">
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<main>
-    <div class="container-produto">
-      <div class="image-produto">
-        
-      </div>
-      <div class="container-descricao-produto">
-        <p class="id-produto"></p>
-        <h1 class="nome-produto"></h1>
-        <p class="descricao-produto">
-          
-        </p>
-        <div class="preco-produto">
-          <h2 class="preco-descontado"></h2>
-          <p class="preco-antes"></p>
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Seu Carrinho</h2>
+                <button onclick="toggleCart()" class="close-cart">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Items will be added here dynamically -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-price">$0.00</span>
+                </div>
+                <button onclick="checkout()" class="checkout-btn">Finalizar Compra</button>
+            </div>
         </div>
-  
-        
-      </div>
     </div>
-</main>
 
-  <script src="index.js"></script>
-  
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+    <!-- Main Content -->
+    <main>
+        <div class="container-produto">
+            <!-- Products will be added here dynamically -->
+        </div>
+    </main>
+
+    <script src="index.js"></script>
 </body>
 </html>
