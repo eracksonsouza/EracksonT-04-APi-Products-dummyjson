@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
 }
 
-/* Header Styles */
+
 header {
     background-color: var(--cor-container-background);
     padding: 20px;
@@ -33,7 +33,7 @@ nav {
     padding: 0 20px;
 }
 
-/* Category Filter */
+
 .categories-container {
     flex: 1;
     max-width: 200px;
@@ -57,7 +57,6 @@ nav {
     border-color: var(--cor-button);
 }
 
-/* Cart Container */
 .cart-container {
     position: relative;
 }
@@ -88,7 +87,7 @@ nav {
     font-family: "Montserrat", sans-serif;
 }
 
-/* Main Content */
+
 main {
     padding-top: 100px;
     min-height: 100vh;
@@ -193,7 +192,7 @@ main {
     background-color: hsl(158, 36%, 27%);
 }
 
-/* Cart Modal */
+
 .cart-modal {
     display: none;
     position: fixed;
@@ -317,7 +316,7 @@ main {
     background-color: hsl(158, 36%, 27%);
 }
 
-/* Notification */
+
 .notification {
     position: fixed;
     bottom: 20px;
@@ -342,7 +341,6 @@ main {
     to { opacity: 0; transform: translateY(20px); }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
